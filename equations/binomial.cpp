@@ -1,21 +1,45 @@
-/*
- * okk so pretty much i need to make a binary tree
- * inital price can go up or down  repeat n titimes
- * once tree is built calc s_t to find call and put prices
- * once you know call and put prices go to the previous node and use the call and put prices
- * along with magic probability to find the call and put values of that node
- * repeat this till you arive at node n=0
- * */
+#include <iostream>
+#include <cmath>
 
-/*
- * ok so for this i imagine that ill create a struct that can contain a value v
- * a bool of retraced an int of how many ups an int of how many down and
- * pointers to the next node up and the next node down then i can just traverse this tree running equations
- */
+
 struct Node{
-    double price;
-    int u;
-    int d;
-    bool traversed;
-    Node* left;
-    Node* right;
+    double value;
+
+
+
+class binomial{
+    public:
+        
+        double S;
+        double K;
+        double r;
+        double T;
+        double sigma;
+        int n;
+
+
+        binomial(double InitialStockPrice, double StrikePrice, double RiskFreeRate, double TimeToExpiration, double volatility, int trials){
+            S = InitialStockPrice;
+            K = StrikePrice;
+            r = RiskFreeRate;
+            T = TimeToExpiration;
+            sigma = volatility;
+            n = trials
+        }
+
+        double call(){
+            //makes it a call list
+            //return calculate()
+        }
+
+        double put(){
+            //makes it a put
+            //return calculate()
+        }
+
+        double calculate(){
+            //will take in the final row list
+            //does the summation and multiplication
+            //return value
+        }
+};
